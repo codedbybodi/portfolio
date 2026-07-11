@@ -1,4 +1,4 @@
-import { m, motion } from "motion/react"
+import { motion } from "motion/react"
 
 const education = {
     degree: "Bachelor of Computer Science",

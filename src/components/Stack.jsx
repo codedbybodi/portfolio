@@ -16,8 +16,8 @@ import {
     SiStreamlit,
     SiFlask
 } from "react-icons/si"
-import { DatabaseZap, Icon, SearchCode } from "lucide-react"
-import { label } from "motion/react-client"
+import { DatabaseZap, SearchCode } from "lucide-react"
+
 
 const stackItems = [
     {

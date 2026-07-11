@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { ArrowUpRight, Copy, Check,  } from "lucide-react";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { useState } from "react";
-import { title } from "motion/react-client";
+
 
 
 export default function Contact() {
@@ -108,7 +108,7 @@ export default function Contact() {
                             {
                                 icon: FiMail,
                                 title: "Mail",
-                                href: "#",
+                                href: "mailto:abdulrahmanm55@icloud.com",
                             },
                         ].map((item, index) =>
                             <motion.a

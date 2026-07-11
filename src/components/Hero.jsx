@@ -25,7 +25,7 @@ const Hero = () => {
                     >
                         <span className="absolute inset-0 rounded-full bg-emerald-300/10 blur-xl animate-pulse" />
                         <span className="absolute inset-0 rounded-full border border-emerald-300/20" />
-                        <img src="/ios-avatar1.png" className="relative w-10 h-10 rounded-full border border-white/15 bg-white/5" />
+                        <img src="/ios-avatar1.png" className="relative w-10 h-10 rounded-full border border-white/15 bg-white/5" alt=""/>
                     </motion.div>
                     <p className="text-white">
                         Hey, I'm{' '}
@@ -43,6 +43,7 @@ const Hero = () => {
                     <motion.a 
                         href="https://open.spotify.com/track/3I5azi0831uNpYQsfYsW7G?si=137022373af64e08" 
                         target="_blank"
+                        rel="noreferrer"
                         className="flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm hover:bg-white/10"
                         whileHover={{ paddingLeft: "20px", paddingRight: "20px" }}
                         >
@@ -54,17 +55,17 @@ const Hero = () => {
                 </motion.div>
 
                 <nav className="flex flex-wrap items-center gap-4 md:gap-6">
-                    <a href="https://www.linkedin.com/in/abdulrahman-khodiary" target="_blank" className="flex items-center gap-1 text-sm text-zinc-400 hover:text-white transition">
+                    <a href="https://www.linkedin.com/in/abdulrahman-khodiary" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-sm text-zinc-400 hover:text-white transition">
                         <FiLinkedin size={16} /> LinkedIn
                     </a>
-                    <a href="https://github.com/codedbybodi" target="_blank" className="flex items-center gap-1 text-sm text-zinc-400 hover:text-white transition">
+                    <a href="https://github.com/codedbybodi" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-sm text-zinc-400 hover:text-white transition">
                         <FiGithub size={16} /> GitHub
                     </a>
-                    <a href="#" className="flex items-center gap-1 text-sm text-zinc-400 hover:text-white transition">
+                    <a href="https://x.com/abdrhmanm1" className="flex items-center gap-1 text-sm text-zinc-400 hover:text-white transition">
                         <FaXTwitter size={16} /> X
                     </a>
                     <motion.a
-                        href="#"
+                        href="#contact"
                         className="relative inline-flex overflow-hidden rounded-full border border-white/15 bg-white/5 px-4 py-0.9 text-white"
                         initial="rest"
                         whileHover="hover"

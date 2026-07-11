@@ -116,10 +116,10 @@ function ProjectModal({ project, onClose}) {
                         </div>
 
                         <div className="mt-10 flex flex-col gap-3 sm:flex-row lg:flex-col">
-                            <a href={project.links.live} target="_blank" className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-300 px-5 py-3 text-sm font-bold text-[#031008] transition focus:ring-2 focus:ring-emerald-300 focus:ring-offset-[#030504]">
+                            <a href={project.links.live} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-300 px-5 py-3 text-sm font-bold text-[#031008] transition focus:ring-2 focus:ring-emerald-300 focus:ring-offset-[#030504]">
                                 Open live Project <ArrowIcon className="h-4 w-4" />
                             </a>
-                            <a href={project.links.repo} target="_blank" className="inline-flex items-center rounded-full border border-white/15 px-5 py-3 text-sm font-bold text-white/80 transition hover:border-white/30 hover:bg-white/[0.04] focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:ring-offset-2 focus:ring-offset-[#030504]">
+                            <a href={project.links.repo} target="_blank" rel="noreferrer" className="inline-flex items-center rounded-full border border-white/15 px-5 py-3 text-sm font-bold text-white/80 transition hover:border-white/30 hover:bg-white/[0.04] focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:ring-offset-2 focus:ring-offset-[#030504]">
                                 View Repository
                             </a>
                         </div>
