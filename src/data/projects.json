@@ -1,0 +1,84 @@
+[
+    {
+        "id": "fintrack",
+        "title": "FinTrack",
+        "category": "Personal Finance Tracker with AI analysis",
+        "eyebrow": "Product analysis",
+        "year": "2026",
+        "role": "Full-stack product build",
+        "images": ["/images/showcase1.png"],
+        "summary": "Personal Finance Tracker with AI analysis",
+        "details": [
+            "Built transaction categorization flows with editable rules and confidence states.",
+            "Added monthly budget comparison, account snapshots, and recurring-spend detection.",
+            "Designed AI insight card that explain what changed without overwhelming the dashboard",
+            "AI analysis based on your real trasnication data with tips in spending"
+        ],
+        "stack": ["FastAPI(Python)", "React", "Tailwind", "PostgreSQL", "JWT + bcrypt", "Rechart.js"],
+        "links": {
+            "live": "https://fintrack-nu-dun.vercel.app",
+            "repo": "https://github.com/codedbybodi/fintrack"
+        }
+    },
+    {
+        "id": "relay",
+        "title": "Relay",
+        "category": "Real-time chat app",
+        "eyebrow": "Featured build",
+        "year": "2026",
+        "role": "Full-stack product build",
+        "images": ["/images/banner.png"],
+        "summary": "A focused messaging workspace with live conversations, channel presence, media sharing, and a calm interface built for teams that move quickly",
+        "details": ["*"],
+        "stack": ["React", "Tailwind", "PostgreSQL", "FastAPI(Python)", "WebSocket"],
+        "links": {
+            "live": "#",
+            "repo": "https://github.com/codedbybodi/relay-chat-app"
+        }
+    },
+    {
+        "id": "proj-3",
+        "title": "PropIQ",
+        "category": "Property Scraper & AI Market Analyzer",
+        "eyebrow": "Product analysis",
+        "year": "2026",
+        "role": "Full-stack Engineer",
+        "images": ["/images/PropIQ.png"],
+        "summary": "Egyptian property market intelligence, scrapes listings, analyzes price trends, and generates AI-powered market insights",
+        "details": [
+            "Live scarping, collects property listings with price, area, location, bedrooms.",
+            "Advanced filtering, filter by location, price range, property type.",
+            "Auto-scheduled, APSchedular runs the scraper every 24 hours automatically.",
+            "AI market analysis, Generates insights from real data (trends, avg price, avg price per meter)."
+        ],
+        "stack": ["FastAPI(Python)", "PostgreSQL", "Streamlit", "BeautifulSoup", "SQLAlchemy"],
+        "links": {
+            "live": "https://property-scraper-api.streamlit.app",
+            "repo": "https://github.com/codedbybodi/property-scraper-api"
+        }
+    },
+    {
+        "id": "proj-4",
+        "title": "AI Job Application Assistant",
+        "category": "Backend API",
+        "eyebrow": "Backend API",
+        "year": "2026",
+        "role": "Backend Developer",
+        "images": ["/images/AI_Job_Assistant.png"],
+        "summary": "Personal Finance Tracker with AI analysis",
+        "details": [
+            "JWT Authentication, Multi-user support with secure login",
+            "AI-Powered Analysis, Scrapes company website + analyzer job description",
+            "Cover Letter Generator, Profesional 3-paragraph cover letter per application",
+            "Custom Cv Summary, Tailored to each specific job and company",
+            "Interview Tips, 5 targeted tips based on the job requirements"
+        ],
+        "stack": ["FastAPI(Python)", "JWT Authentication", "PostgreSQL", "BeautifulSoup", "SQLAlchemy"],
+        "links": {
+            "live": "#",
+            "repo": "https://github.com/codedbybodi/ai-job-assistant"
+        }
+    }
+
+]
+
