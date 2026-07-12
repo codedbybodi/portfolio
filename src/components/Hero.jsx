@@ -1,133 +1,109 @@
-import React from "react"
-import { motion } from "motion/react"
+import { useEffect, useState } from "react"
+import { AnimatePresence, motion } from "motion/react"
+import { Menu, X } from "lucide-react"
 import { FiGithub, FiLinkedin } from "react-icons/fi"
-import { FaXTwitter } from "react-icons/fa6"
-import { FaArrowCircleRight } from "react-icons/fa";
 
-const Hero = () => {
-    return (
-        <div className="relative min-h-screen w-full px-12 pt-10 text-[#fff]">
-            <header className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 pb-6">
-                <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className='flex items-center gap-3'
-                >
-                    <motion.div
-                        initial={{ scale: 0.95, y: -4 }}
-                        whileInView={{ scale: 1, y: 0 }}
-                        whileHover={{ scale: 1.04, rotate: 2 }}
-                        viewport={{ once: true, amount: 0.35 }}
-                        transition={{ type: 'spring', stiffness: 220, damping: 20 }}
-                        className="relative flex h-10 w-10 items-center justify-center"
-                    >
-                        <span className="absolute inset-0 rounded-full bg-emerald-300/10 blur-xl animate-pulse" />
-                        <span className="absolute inset-0 rounded-full border border-emerald-300/20" />
-                        <img src="/ios-avatar1.png" className="relative w-10 h-10 rounded-full border border-white/15 bg-white/5" alt=""/>
-                    </motion.div>
-                    <p className="text-white">
-                        Hey, I'm{' '}
-                        <motion.span
-                            initial={{ opacity: 0, y: 12 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.35 }}
-                            transition={{ duration: 0.8, ease: "easeOut" }}
-                            whileHover={{ scale: 1.03, textShadow: '0 0 18px rgba(13,150,0,0.9)' }}
-                            className="text-emerald-300"
-                        >
-                            Abdulrahman Mohamed
-                        </motion.span>
-                    </p>
-                    <motion.a 
-                        href="https://open.spotify.com/track/3I5azi0831uNpYQsfYsW7G?si=137022373af64e08" 
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm hover:bg-white/10"
-                        whileHover={{ paddingLeft: "20px", paddingRight: "20px" }}
-                        >
-                        <span className="text-[#0d9600]">♪</span>
-                        <span className="text-zinc-200">Cola</span>
-                        <span className="text-zinc-500">by Lana Del Rey</span>
-                    </motion.a>
+const navItems = [
+  { label: "Work", href: "#projects" },
+  { label: "Skills", href: "#stack" },
+  { label: "Education", href: "#education" },
+  { label: "Contact", href: "#contact" },
+]
 
-                </motion.div>
-
-                <nav className="flex flex-wrap items-center gap-4 md:gap-6">
-                    <a href="https://www.linkedin.com/in/abdulrahman-khodiary" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-sm text-zinc-400 hover:text-white transition">
-                        <FiLinkedin size={16} /> LinkedIn
-                    </a>
-                    <a href="https://github.com/codedbybodi" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-sm text-zinc-400 hover:text-white transition">
-                        <FiGithub size={16} /> GitHub
-                    </a>
-                    <a href="https://x.com/abdrhmanm1" className="flex items-center gap-1 text-sm text-zinc-400 hover:text-white transition">
-                        <FaXTwitter size={16} /> X
-                    </a>
-                    <motion.a
-                        href="#contact"
-                        className="relative inline-flex overflow-hidden rounded-full border border-white/15 bg-white/5 px-4 py-0.9 text-white"
-                        initial="rest"
-                        whileHover="hover"
-                        animate="rest"
-                        variants={{
-                            rest: {
-                                backgroundColor: 'rgba(255,255,255,0.06)',
-                                borderColor: 'rgba(255,255,255,0.18)',
-                                paddingLeft: 1,
-                                paddingRight: 30,
-                            },
-                            hover: {
-                                backgroundColor: 'rgba(16,185,129,0.18)',
-                                borderColor: 'rgba(16,185,129,0.45)',
-                                paddingLeft: 1,
-                                paddingRight: 35,
-                                transition: { type: 'spring', stiffness: 200, damping: 18 },
-                            },
-                        }}
-                    >
-                        <span className="relative z-10 inline-flex items-center gap-2">
-                             <motion.span
-                                variants={{
-                                    rest: { x: -12, opacity: 0 },
-                                    hover: { x: 0, opacity: 1, transition: { duration: 0.24, ease: 'easeOut' } },
-                                }}
-                                className="inline-flex items-center justify-center rounded-full py-0.5 text-black"
-                            >
-                                <FaArrowCircleRight className="text-emerald-300" size={30}/>
-                            </motion.span>
-                            Get in Touch
-                           
-                        </span>
-                        <motion.span
-                            className="absolute inset-0 rounded-full bg-emerald-300/10"
-                            variants={{ rest: { opacity: 0 }, hover: { opacity: 1, transition: { duration: 0.24, ease: 'easeOut' } } }}
-                        />
-                    </motion.a>
-                </nav>
-            </header>
-
-            <div className="mx-auto mt-20 max-w-6xl">
-                <p className="text-white/40">Full-Stack developer & Product builder</p>
-                <h2 className="text-[60px] font-semibold leading-[1.1]">
-                    Building sharp digital <span className="relative inline-flex">products
-                        <svg viewBox="0 0 286 73" fill="none" className="absolute -left-2 -right-2 -top-1 bottom-0 translate-y-1">
-                            <motion.path
-                                initial={{ pathLength: 0 }}
-                                whileInView={{ pathLength: 1 }}
-                                transition={{ duration: 1.25, ease: "easeInOut" }}
-                                d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
-                                stroke="#6EE7B7"
-                                strokeWidth="3"
-                            />
-                        </svg>
-                    </span> with <span className="text-zinc-500">precision</span> and <span className="font-script italic text-[70px]">intent</span>
-                </h2>
-                <p className="mt-6 text-white/40 text-sm leading-7 max-w-xl">From writing my first line of code at 13 when I discovered Discord bots and wanted to create something special, to co-founding Softworks with my childhood friend. Started college at 16 and currently on track to graduate in the class of 2027 at age 20, turning my early passion for coding into a promising future in tech.</p>
-                <p className="mt-8 text-zinc-500">3+ Years of Experience • Based in Cairo, Egypt</p>
-            </div>
-        </div>
-    )
+function NavLinks({ onNavigate, mobile = false }) {
+  return (
+    <nav aria-label={mobile ? "Mobile navigation" : "Primary navigation"} className={mobile ? "flex flex-col" : "flex items-center gap-5"}>
+      {navItems.map((item) => (
+        <a key={item.href} href={item.href} onClick={onNavigate} className={mobile ? "border-b border-white/10 py-4 text-xl font-medium text-white transition hover:text-emerald-300" : "text-sm text-white/70 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-300"}>
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  )
 }
 
-export default Hero
+export default function Hero() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const closeOnEscape = (event) => event.key === "Escape" && setMenuOpen(false)
+    window.addEventListener("keydown", closeOnEscape)
+    return () => window.removeEventListener("keydown", closeOnEscape)
+  }, [])
+
+  return (
+    <section id="top" className="relative flex min-h-[calc(100svh-1px)] w-full items-start px-5 pb-16 pt-5 sm:px-8 sm:pt-8 lg:px-10 lg:pb-24">
+      <div className="mx-auto flex w-full max-w-6xl flex-col">
+        <header className="relative flex items-center justify-between gap-4 border-b border-white/10 pb-5">
+          <a href="#top" className="group flex min-w-0 items-center gap-3 focus:outline-none focus:ring-2 focus:ring-emerald-300">
+            <span className="relative grid h-10 w-10 shrink-0 place-items-center rounded-full border border-emerald-300/25 bg-emerald-300/10">
+              <img src="/ios-avatar1.webp" width="40" height="40" decoding="async" className="h-10 w-10 rounded-full border border-white/15 object-cover" alt="Abdulrahman Mohamed" />
+            </span>
+            <span className="min-w-0 text-sm font-medium text-white sm:text-base">Abdulrahman <span className="text-emerald-300">Mohamed</span></span>
+          </a>
+
+          <div className="hidden items-center gap-6 md:flex">
+            <NavLinks />
+            <a href="https://www.linkedin.com/in/abdulrahman-khodiary" target="_blank" rel="noreferrer" aria-label="LinkedIn profile" className="text-white/65 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-300"><FiLinkedin size={18} /></a>
+            <a href="https://github.com/codedbybodi" target="_blank" rel="noreferrer" aria-label="GitHub profile" className="text-white/65 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-300"><FiGithub size={18} /></a>
+          </div>
+
+          <button type="button" onClick={() => setMenuOpen((open) => !open)} aria-expanded={menuOpen} aria-controls="mobile-navigation" className="grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-white/[0.04] text-white transition hover:border-emerald-300/60 hover:bg-emerald-300/10 focus:outline-none focus:ring-2 focus:ring-emerald-300 md:hidden">
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.span key={menuOpen ? "close" : "menu"} initial={{ opacity: 0, rotate: -90, scale: 0.7 }} animate={{ opacity: 1, rotate: 0, scale: 1 }} exit={{ opacity: 0, rotate: 90, scale: 0.7 }} transition={{ duration: 0.18 }}>
+                {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+              </motion.span>
+            </AnimatePresence>
+            <span className="sr-only">{menuOpen ? "Close navigation" : "Open navigation"}</span>
+          </button>
+
+          <AnimatePresence>
+            {menuOpen && (
+              <motion.div id="mobile-navigation" initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.2 }} className="absolute right-0 top-[calc(100%+0.75rem)] z-50 w-full max-w-sm rounded-2xl border border-white/15 bg-[#07100c]/95 p-5 shadow-2xl backdrop-blur-xl md:hidden">
+                <NavLinks mobile onNavigate={() => setMenuOpen(false)} />
+                <div className="mt-5 flex gap-3">
+                  <a href="https://www.linkedin.com/in/abdulrahman-khodiary" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm text-white/75"><FiLinkedin /> LinkedIn</a>
+                  <a href="https://github.com/codedbybodi" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm text-white/75"><FiGithub /> GitHub</a>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </header>
+
+        <div className="my-auto max-w-5xl pb-8 pt-20 sm:pt-28 lg:pt-32">
+          <p className="text-sm font-medium tracking-[0.18em] text-emerald-300 sm:text-base">FULL-STACK DEVELOPER · CAIRO, EGYPT</p>
+          <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-[1.06] tracking-tight text-white sm:text-5xl lg:text-7xl">
+            I build practical digital{" "}
+            <span className="relative">
+                products
+                <svg
+                    viewBox="0 0 286 73"
+                    fill="none"
+                    className="absolute -left-2 -right-2 top-[5px] bottom-0 translate-y-1"
+                >
+                    <motion.path
+                    initial={{ pathLength: 0 }}
+                    whileInView={{ pathLength: 1 }}
+                    transition={{
+                        duration: 1.25,
+                        ease: "easeInOut",
+                    }}
+                    d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                    stroke="#A7F3D0"
+                    strokeWidth="3"
+                    />
+                </svg>
+            </span>
+            {" "}with <span className="text-white/65">precision</span> and <span className="font-script text-[1.12em] font-normal italic text-emerald-200">intent.</span>
+          </h1>
+          <p className="mt-7 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">I create useful web products with React, FastAPI, PostgreSQL, and AI combining product thinking with full-stack execution.</p>
+          <p className="mt-5 text-sm text-white/60">3+ years of experience · Available for full-time and freelance opportunities</p>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <a href="#projects" className="inline-flex items-center justify-center rounded-full bg-emerald-300 px-6 py-3 text-sm font-bold text-[#031008] transition hover:bg-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:ring-offset-2 focus:ring-offset-[#020403]">View selected work</a>
+            <a href="mailto:abdulrahmanm55@icloud.com" className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-bold text-white transition hover:border-emerald-300/60 hover:bg-emerald-300/10 focus:outline-none focus:ring-2 focus:ring-emerald-300">Email me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

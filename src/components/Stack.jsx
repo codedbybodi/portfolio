@@ -133,7 +133,7 @@ const stackItems = [
 
 export default function Stack() {
     return (
-        <section className="px-5 py-10 text-white sm:px-8 lg:px-20 lg:py-14">
+        <section id="stack" className="px-5 py-16 text-white sm:px-8 sm:py-20 lg:px-20 lg:py-24">
             <div className="mx-auto max-w-8xl">
                 <h2 className="mb-7 text-3xl font-semibold tracking-normal text-white">
                     Stack

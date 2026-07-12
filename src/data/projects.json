@@ -2,17 +2,17 @@
     {
         "id": "fintrack",
         "title": "FinTrack",
-        "category": "Personal Finance Tracker with AI analysis",
+        "category": "Personal finance tracker with AI analysis",
         "eyebrow": "Product analysis",
         "year": "2026",
         "role": "Full-stack product build",
-        "images": ["/images/showcase1.png"],
-        "summary": "Personal Finance Tracker with AI analysis",
+        "images": ["/images/showcase1.webp"],
+        "summary": "A personal finance tracker that turns transaction data into clear spending patterns and practical AI-assisted insights.",
         "details": [
             "Built transaction categorization flows with editable rules and confidence states.",
             "Added monthly budget comparison, account snapshots, and recurring-spend detection.",
-            "Designed AI insight card that explain what changed without overwhelming the dashboard",
-            "AI analysis based on your real trasnication data with tips in spending"
+            "Designed AI insight cards that explain what changed without overwhelming the dashboard.",
+            "Added AI-assisted analysis of transaction data with practical spending guidance."
         ],
         "stack": ["FastAPI(Python)", "React", "Tailwind", "PostgreSQL", "JWT + bcrypt", "Rechart.js"],
         "links": {
@@ -27,12 +27,16 @@
         "eyebrow": "Featured build",
         "year": "2026",
         "role": "Full-stack product build",
-        "images": ["/images/banner.png"],
-        "summary": "A focused messaging workspace with live conversations, channel presence, media sharing, and a calm interface built for teams that move quickly",
-        "details": ["*"],
+        "images": ["/images/banner.webp"],
+        "summary": "A focused messaging workspace with live conversations, channel presence, media sharing, and a calm interface for fast-moving teams.",
+        "details": [
+            "Built a channel-based workspace for focused team conversations.",
+            "Added real-time messaging and presence with WebSockets.",
+            "Designed media sharing and a calm interface for day-to-day collaboration."
+        ],
         "stack": ["React", "Tailwind", "PostgreSQL", "FastAPI(Python)", "WebSocket"],
         "links": {
-            "live": "#",
+            "live": null,
             "repo": "https://github.com/codedbybodi/relay-chat-app"
         }
     },
@@ -42,14 +46,14 @@
         "category": "Property Scraper & AI Market Analyzer",
         "eyebrow": "Product analysis",
         "year": "2026",
-        "role": "Full-stack Engineer",
-        "images": ["/images/PropIQ.png"],
-        "summary": "Egyptian property market intelligence, scrapes listings, analyzes price trends, and generates AI-powered market insights",
+        "role": "Full-stack engineer",
+        "images": ["/images/PropIQ.webp"],
+        "summary": "Egyptian property market intelligence that collects listings, analyzes price trends, and generates AI-assisted market insights.",
         "details": [
-            "Live scarping, collects property listings with price, area, location, bedrooms.",
-            "Advanced filtering, filter by location, price range, property type.",
-            "Auto-scheduled, APSchedular runs the scraper every 24 hours automatically.",
-            "AI market analysis, Generates insights from real data (trends, avg price, avg price per meter)."
+            "Collects property listings with price, area, location, and bedroom data.",
+            "Supports filtering by location, price range, and property type.",
+            "Uses APScheduler to run the scraper automatically every 24 hours.",
+            "Generates AI-assisted insights from real data, including trends and average price per square meter."
         ],
         "stack": ["FastAPI(Python)", "PostgreSQL", "Streamlit", "BeautifulSoup", "SQLAlchemy"],
         "links": {
@@ -64,18 +68,18 @@
         "eyebrow": "Backend API",
         "year": "2026",
         "role": "Backend Developer",
-        "images": ["/images/AI_Job_Assistant.png"],
-        "summary": "Personal Finance Tracker with AI analysis",
+        "images": ["/images/AI_Job_Assistant.webp"],
+        "summary": "A backend API that helps job seekers analyze roles and prepare tailored application materials.",
         "details": [
-            "JWT Authentication, Multi-user support with secure login",
-            "AI-Powered Analysis, Scrapes company website + analyzer job description",
-            "Cover Letter Generator, Profesional 3-paragraph cover letter per application",
-            "Custom Cv Summary, Tailored to each specific job and company",
-            "Interview Tips, 5 targeted tips based on the job requirements"
+            "Supports secure multi-user accounts with JWT authentication.",
+            "Analyzes job descriptions and company websites to prepare application context.",
+            "Generates a tailored three-paragraph cover letter for each application.",
+            "Creates a custom CV summary for a specific role and company.",
+            "Provides five targeted interview tips based on job requirements."
         ],
         "stack": ["FastAPI(Python)", "JWT Authentication", "PostgreSQL", "BeautifulSoup", "SQLAlchemy"],
         "links": {
-            "live": "#",
+            "live": null,
             "repo": "https://github.com/codedbybodi/ai-job-assistant"
         }
     }

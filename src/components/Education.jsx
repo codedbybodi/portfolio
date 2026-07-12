@@ -5,7 +5,7 @@ const education = {
     school: "Arab Open University",
     location: "CAI, EG",
     duration: "2024 - Present",
-    description: "Passionate about building scalable full-stack applications and AI-powered products. My studies focus on software engineering principles while I continue learnign modren technologies through real-world projects",
+    description: "I build scalable full-stack applications and AI-powered products. My studies focus on software engineering principles while I continue learning modern technologies through real-world projects.",
 
     coursework: [
         "Data Structures",
@@ -19,18 +19,18 @@ const education = {
 
 export default function Education() {
     return(
-        <section id="education" className="relative overflow-hidden py-40">
+        <section id="education" className="relative overflow-hidden px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
             {/* Background Glow */}
             <div className="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/10 blur-[180px]" />
 
-            <div className="relative z-10 mx-auto max-w-6xl px-6">
+            <div className="relative z-10 mx-auto max-w-6xl">
                 {/* Heading */}
 
                 <motion.p 
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="uppercase tracking-[0.35em] text-zinc-500"
+                    className="text-sm font-medium uppercase tracking-[0.28em] text-emerald-300"
                 >
                     My Journey
                 </motion.p>
@@ -38,7 +38,7 @@ export default function Education() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
-                    className="mt-3 text-5xl font-bold text-white md:text-6xl"
+                    className="mt-4 text-4xl font-bold text-white sm:text-5xl md:text-6xl"
                 >   
                     Education
                 </motion.h2>
@@ -50,7 +50,7 @@ export default function Education() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7 }}
                     viewport={{ once: true }}
-                    className="relative mt-24 overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.03] p-10 backdrop-blur-xl md:p-16"
+                    className="relative mt-12 overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] p-6 backdrop-blur-xl sm:mt-16 sm:p-10 md:p-16"
                 >
                     {/* Cards Glow */}
                     <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-violet-500/30 blur-[120px]" />
@@ -83,7 +83,7 @@ export default function Education() {
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 0.4 }}
                         viewport={{ once: true }}
-                        className="mt-8 text-xs uppercase tracking-[0.35em] text-zinc-500"
+                        className="mt-8 text-xs uppercase tracking-[0.28em] text-white/60"
                     >
                         {education.duration}
                     </motion.p>
@@ -94,7 +94,7 @@ export default function Education() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.45 }}
                         viewport={{ once: true }}
-                        className="mt-5 text-4xl font-bold text-white md:text-5xl"
+                        className="mt-5 text-3xl font-bold text-white sm:text-4xl md:text-5xl"
                     >       
                         {education.degree}
                     </motion.h3>
@@ -114,7 +114,7 @@ export default function Education() {
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 0.65 }}
                         viewport={{ once: true }}
-                        className="mt-2 text-zinc-500"
+                        className="mt-2 text-white/60"
                     >  
                         {education.location}
                     </motion.p>
@@ -125,7 +125,7 @@ export default function Education() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.75 }}
                         viewport={{ once: true }}
-                        className="mt-10 max-w-3xl leading-8 text-zinc-400"
+                        className="mt-10 max-w-3xl leading-8 text-white/70"
                     >
                         {education.description}
                     </motion.p>
