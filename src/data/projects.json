@@ -6,7 +6,7 @@
         "eyebrow": "Product analysis",
         "year": "2026",
         "role": "Full-stack product build",
-        "images": ["/images/showcase1.webp"],
+        "images": ["/images/fintrackpic.webp"],
         "summary": "A personal finance tracker that turns transaction data into clear spending patterns and practical AI-assisted insights.",
         "details": [
             "Built transaction categorization flows with editable rules and confidence states.",
